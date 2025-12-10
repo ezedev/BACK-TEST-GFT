@@ -30,7 +30,6 @@ class SimilarProductsContractTest {
                 .expectStatus().isOk()
                 .expectBodyList(ProductDTO.class)
                 .consumeWith(response -> {
-                    // Validaciones del contrato
                     var products = response.getResponseBody();
                     assert products != null;
                     assert !products.isEmpty();

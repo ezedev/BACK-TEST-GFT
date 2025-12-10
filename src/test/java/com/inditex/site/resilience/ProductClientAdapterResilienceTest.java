@@ -49,31 +49,6 @@ class ProductClientAdapterResilienceAdvancedTest {
         mockWebServer.shutdown();
     }
 
-    /*
-    @Test
-    void circuitBreaker_shouldOpen_afterRepeatedFailures() {
-        // simulamos fallo del servicio
-        mockWebServer.enqueue(new MockResponse().setResponseCode(500));
-        mockWebServer.enqueue(new MockResponse().setResponseCode(500));
-
-        // dos llamadas para abrir CB
-        StepVerifier.create(adapter.getProductById("123"))
-                .expectError()
-                .verify();
-
-        StepVerifier.create(adapter.getProductById("123"))
-                .expectError()
-                .verify();
-
-        StepVerifier.create(adapter.getProductById("123"))
-                .expectError()
-                .verify();
-
-
-        // después de los fallos, CB debe estar OPEN
-        Assertions.assertEquals(CircuitBreaker.State.OPEN, circuitBreaker.getState());
-    }
- */
     @Test
     void fallback_shouldReturnEmptyMono_afterFailures() {
         mockWebServer.enqueue(new MockResponse().setResponseCode(500));
@@ -89,7 +64,6 @@ class ProductClientAdapterResilienceAdvancedTest {
 
     @Test
     void cache_shouldStoreProducts_afterSuccessfulCall() {
-        // simulamos respuesta válida del servicio
         ProductExternalDTO dto = new ProductExternalDTO();
         dto.setId("123");
         dto.setName("Test");

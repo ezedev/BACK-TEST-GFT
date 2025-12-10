@@ -148,18 +148,15 @@
             <version>3.0.1</version> <!-- última estable para JDK 21 -->
             <scope>test</scope>
         </dependency>
-        <!-- ✅ SOPORTE PARA JsonNullable (OpenAPI DTOs) -->
         <dependency>
             <groupId>org.openapitools</groupId>
             <artifactId>jackson-databind-nullable</artifactId>
             <version>0.2.6</version>
         </dependency>
-
-        <!-- Swagger / OpenAPI -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
-            <version>2.2.0</version>
+            <version>3.0.0</version>
         </dependency>
     </dependencies>
 	<dependencyManagement>
