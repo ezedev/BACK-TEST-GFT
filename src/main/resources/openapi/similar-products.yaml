@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: Similar Products API
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /product/{id}/similar:
+    get:
+      summary: Obtener productos similares
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de productos similares
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductDTO'
+components:
+  schemas:
+    ProductDTO:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        price:
+          type: number
+          format: float
+        description:
+          type: string
+        availability:
+          type: boolean
