@@ -1,0 +1,6 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/com/inditex/site/infrastructure/adapter/in/rest/api/ApiUtil.java
+src/main/java/com/inditex/site/infrastructure/adapter/in/rest/api/DefaultApi.java
+src/main/java/com/inditex/site/infrastructure/adapter/in/rest/dto/ProductDTO.java

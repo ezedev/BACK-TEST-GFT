@@ -1,0 +1,7 @@
+/home/jarvis/Documentos/site/src/test/java/com/inditex/site/SiteApplicationTests.java
+/home/jarvis/Documentos/site/src/test/java/com/inditex/site/application/usecase/GetSimilarProductsServiceTest.java
+/home/jarvis/Documentos/site/src/test/java/com/inditex/site/architecture/HexagonalArchitectureTest.java
+/home/jarvis/Documentos/site/src/test/java/com/inditex/site/contract/SimilarProductsContractTest.java
+/home/jarvis/Documentos/site/src/test/java/com/inditex/site/infrastructure/adapter/in/rest/controller/SimilarProductsControllerTest.java
+/home/jarvis/Documentos/site/src/test/java/com/inditex/site/infrastructure/adapter/out/client/ProductClientAdapterTest.java
+/home/jarvis/Documentos/site/src/test/java/com/inditex/site/resilience/ProductClientAdapterResilienceTest.java

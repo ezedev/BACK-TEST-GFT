@@ -1,0 +1,38 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: site
+
+  cache:
+    type: caffeine
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+external:
+  product:
+    base-url: http://localhost:3001
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      productClient:
+        slidingWindowSize: 2
+        failureRateThreshold: 50
+        waitDurationInOpenState: 500ms
+        permittedNumberOfCallsInHalfOpenState: 3
+  retry:
+    instances:
+      productClient:
+        maxAttempts: 3
+        waitDuration: 500ms
+
+cache:
+  ttl:
+    similar-ids: 30s
+    product-detail: 2m

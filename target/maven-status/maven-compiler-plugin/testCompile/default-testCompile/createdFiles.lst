@@ -1,0 +1,7 @@
+com/inditex/site/SiteApplicationTests.class
+com/inditex/site/infrastructure/adapter/in/rest/controller/SimilarProductsControllerTest.class
+com/inditex/site/contract/SimilarProductsContractTest.class
+com/inditex/site/application/usecase/GetSimilarProductsServiceTest.class
+com/inditex/site/infrastructure/adapter/out/client/ProductClientAdapterTest.class
+com/inditex/site/architecture/HexagonalArchitectureTest.class
+com/inditex/site/resilience/ProductClientAdapterResilienceAdvancedTest.class
